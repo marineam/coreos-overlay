@@ -76,8 +76,7 @@ IUSE="bootimage cros_ec"
 # don't write RDEPEND=$DEPEND. RDEPEND should have an explicit list of what it
 # needs to extract and execute the updater.
 DEPEND="
-	>=chromeos-base/vboot_reference-1.0-r230
-	chromeos-base/vpd
+	coreos-base/vpd
 	dev-util/shflags
 	>=sys-apps/flashrom-0.9.3-r36
 	sys-apps/mosys
@@ -85,8 +84,8 @@ DEPEND="
 
 # Build firmware from source.
 DEPEND="$DEPEND
-	bootimage? ( sys-boot/chromeos-bootimage )
-	cros_ec? ( chromeos-base/chromeos-ec )
+	bootimage? ( sys-boot/coreos-bootimage )
+	cros_ec? ( coreos-base/coreos-ec )
 	"
 
 # Maintenance note:  The factory install shim downloads and executes
@@ -103,7 +102,6 @@ RDEPEND="
 	app-arch/gzip
 	app-arch/sharutils
 	app-arch/tar
-	chromeos-base/vboot_reference
 	sys-apps/util-linux"
 
 # Check for EAPI 2+
@@ -112,7 +110,7 @@ case "${EAPI:-0}" in
 	*) die "unsupported EAPI" ;;
 esac
 
-UPDATE_SCRIPT="chromeos-firmwareupdate"
+UPDATE_SCRIPT="coreos-firmwareupdate"
 FW_IMAGE_LOCATION=""
 FW_RW_IMAGE_LOCATION=""
 EC_IMAGE_LOCATION=""
