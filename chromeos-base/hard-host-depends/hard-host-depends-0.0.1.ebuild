@@ -100,7 +100,6 @@ RDEPEND="${RDEPEND}
 	>=media-libs/freetype-2.2.1
 	media-libs/mesa
 	net-misc/gsutil
-	sys-apps/module-init-tools
 	sys-apps/usbutils
 	!sys-apps/nih-dbus-tool
 	=sys-devel/automake-1.10*
