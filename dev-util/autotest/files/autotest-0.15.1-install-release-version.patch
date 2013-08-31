@@ -1,0 +1,14 @@
+diff --git a/setup.py b/setup.py
+index c046730..10eb03c 100644
+--- a/setup.py
++++ b/setup.py
+@@ -99,7 +99,8 @@ def get_package_data():
+             _fix_data_paths(scheduler.setup.get_package_data()),
+             _fix_data_paths(database_legacy.setup.get_package_data()),
+             _fix_data_paths(tko.setup.get_package_data()),
+-            _fix_data_paths(utils.setup.get_package_data())
++            _fix_data_paths(utils.setup.get_package_data()),
++            {'autotest': ['RELEASE-VERSION']},
+             ])
+ 
+ 
