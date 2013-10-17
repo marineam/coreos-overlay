@@ -98,8 +98,13 @@ RDEPEND="${RDEPEND}
 	sys-apps/which
 	app-admin/sudo
 	app-admin/rsyslog
+	app-arch/bzip2
+	app-arch/cpio
 	app-arch/gzip
 	app-arch/tar
+	app-arch/unzip
+	app-arch/xz-utils
+	app-arch/zip
 	app-shells/bash
 	coreos-base/chromeos-auth-config
 	coreos-base/coreos-base
