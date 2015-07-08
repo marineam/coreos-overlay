@@ -190,9 +190,6 @@ multilib_src_configure() {
 	local myeconfargs=(
 		--with-pamconfdir=/usr/share/pam.d
 
-		# Workaround for bug 516346
-		--enable-dependency-tracking
-
 		--disable-maintainer-mode
 		--localstatedir=/var
 		--with-pamlibdir=$(getpam_mod_dir)
